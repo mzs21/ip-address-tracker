@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Rubik", sans-serif;
+  }
+
+  /* SearchBar.tsx */
+
+  form {
+    @apply flex justify-center mx-auto max-w-xl lg:mt-8;
+  }
+
+  input {
+    @apply py-3 sm:py-4 px-4 rounded-l-lg outline-none w-full;
+  }
+
+  [type="submit"] {
+    @apply px-4 rounded-r-lg bg-black hover:bg-[#2b2b2b];
+  }
+
+  /* Headline.tsx */
+
+  h1 {
+    @apply text-center text-2xl text-white font-medium mb-4;
+
+    &:md {
+      @apply text-3xl;
+    }
+
+    &:lg {
+      @apply text-4xl mt-4;
+    }
+  }
+
+  /* Card.tsx */
+  h2 {
+    @apply text-xl font-semibold text-[#2b2b2b] md:text-left;
+  }
+
+  h3 {
+    @apply text-xs uppercase font-semibold text-[#969696] tracking-wider;
+
+    &:md {
+      @apply text-left mb-0;
+    }
+  }
+}
+
+@layer components {
+  /* App.tsx */
+
+  .primary-section {
+    @apply p-6 relative;
+  }
+
+  /* BackgroundImage.tsx */
+
+  .bg-image {
+    @apply w-screen h-56 lg:h-72 object-cover;
+  }
+
+  /* Cards.tsx */
+  .cards {
+    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border;
+
+    &:sm {
+      @apply grid-cols-4;
+    }
+
+    &:lg {
+      @apply mt-10;
+    }
+  }
+
+  /* Card.tsx */
+  .card {
+    @apply text-center grid gap-1  md:py-5 lg:py-8 md:border-r md:border-[#969696] last:border-0 md:ml-4;
+
+    &:first {
+      @apply mt-3;
+    }
+
+    &:last {
+      @apply mb-3;
+    }
+ 
+    &:sm {
+      @apply mt-2 mb-2;
+    }
+  }
+}
