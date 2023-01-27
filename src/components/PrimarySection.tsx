@@ -1,5 +1,6 @@
 import Cards from "./Cards";
 import Headline from "./Headline";
+import Map from "./Map";
 import SearchBar from "./SearchBar";
 
 const PrimarySection = () => {
@@ -8,6 +9,7 @@ const PrimarySection = () => {
       <Headline />
       <SearchBar />
       <Cards />
+    
     </section>
   );
 };
