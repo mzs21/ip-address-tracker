@@ -31,11 +31,11 @@
 
   /* Card.tsx */
   h2 {
-    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-[#2b2b2b] lg:text-left;
+    @apply text-xl md:lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[#2b2b2b] lg:text-left;
   }
 
   h3 {
-    @apply text-xs uppercase font-semibold text-[#969696] tracking-wider lg:text-left md:mb-0;
+    @apply text-xs xl:text-sm uppercase font-semibold text-[#969696] tracking-wider lg:text-left md:mb-0;
   }
 }
 
@@ -43,22 +43,22 @@
   /* App.tsx */
 
   .primary-section {
-    @apply p-6 relative;
+    @apply p-2 relative;
   }
 
   /* BackgroundImage.tsx */
 
   .bg-image {
-    @apply w-screen h-56 lg:h-72 object-cover;
+    @apply w-screen h-56 lg:h-64 object-cover;
   }
 
   /* Cards.tsx */
   .cards {
-    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border md:grid-cols-2 lg:grid-cols-4 lg:mt-10 sm:mt-6 md:py-5 lg:py-8 mx-6 md:mx-8;
+    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border md:grid-cols-2 lg:grid-cols-4 lg:mt-10 sm:mt-6 md:py-4 lg:py-8 mx-6 md:mx-8;
   }
 
   /* Card.tsx */
   .card {
-    @apply text-center grid gap-1 first:mt-3 sm:first:mt-0 last:mb-3 sm:last:mb-0 md:border-r md:border-[#969696] last:border-0 md:ml-4 md:[&:nth-child(2)]:border-0 lg:[&:nth-child(2)]:border-r lg:[&:nth-child(2)]:-mr-2;
+    @apply text-center grid gap-1 lg:gap-0 first:mt-3 sm:first:mt-0 last:mb-3 sm:last:mb-0 md:border-r md:border-[#969696] last:border-0 md:ml-4 md:[&:nth-child(2)]:border-0 lg:[&:nth-child(2)]:border-r lg:[&:nth-child(2)]:-mr-2 lg:mr-8;
   }
 }
