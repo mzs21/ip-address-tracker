@@ -54,11 +54,11 @@
 
   /* Cards.tsx */
   .cards {
-    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border md:grid-cols-2 lg:grid-cols-4 lg:mt-10 sm:mt-6 md:py-4 lg:py-8 mx-6 md:mx-8;
+    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border shadow md:grid-cols-2 lg:grid-cols-4 lg:mt-10 md:py-4 lg:py-8 mx-6 md:mx-20;
   }
 
   /* Card.tsx */
   .card {
-    @apply text-center grid gap-1 lg:gap-0 first:mt-3 sm:first:mt-0 last:mb-3 sm:last:mb-0 md:border-r md:border-[#969696] last:border-0 md:ml-4 md:[&:nth-child(2)]:border-0 lg:[&:nth-child(2)]:border-r lg:[&:nth-child(2)]:-mr-2 lg:mr-8;
+    @apply text-center grid gap-1 first:mt-3 sm:first:mt-0 last:mb-3 sm:last:mb-0 md:border-r md:border-[#969696] last:border-0 md:ml-4 md:[&:nth-child(2)]:border-0 lg:[&:nth-child(2)]:border-r lg:[&:nth-child(1)]:ml-12;
   }
 }
