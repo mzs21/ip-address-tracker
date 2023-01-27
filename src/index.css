@@ -31,34 +31,43 @@
 
   /* Card.tsx */
   h2 {
-    @apply text-xl md:lg:text-2xl xl:text-3xl 2xl:text-5xl font-semibold text-[#2b2b2b];
+    @apply text-lg md:text-xl font-semibold text-[#2b2b2b];
   }
 
   h3 {
     @apply text-xs xl:text-sm 2xl:text-base uppercase font-semibold text-[#969696] tracking-wider md:mb-0;
   }
+
+  /* Sections */
+
+  section {
+    @apply p-2 relative;
+  }
 }
 
 @layer components {
-  /* App.tsx */
-
-  .primary-section {
-    @apply p-2 relative;
-  }
-
+  
   /* BackgroundImage.tsx */
 
   .bg-image {
-    @apply w-screen h-56 lg:h-64 object-cover;
+    @apply w-screen h-64 lg:h-72 2xl:h-96 object-cover;
   }
 
   /* Cards.tsx */
+
   .cards {
-    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border shadow md:grid-cols-2 lg:grid-cols-4 lg:mt-10 md:py-4 lg:py-8 mx-6 md:mx-20;
+    @apply bg-white rounded-lg grid place-content-center mt-6 gap-2 border shadow md:grid-cols-2 lg:grid-cols-4 lg:mt-10 md:py-4 lg:py-8 mx-8 md:mx-20 -mb-36 md:-mb-16 lg:-mb-24 xl:-mb-28 relative z-[10000];
   }
 
   /* Card.tsx */
+
   .card {
     @apply text-center lg:text-left first:mt-3 sm:first:mt-0 last:mb-3 sm:last:mb-0 md:border-r md:border-[#969696] last:border-0 md:ml-4 md:[&:nth-child(2)]:border-0 lg:[&:nth-child(2)]:border-r lg:[&:nth-child(1)]:ml-12;
+  }
+
+  /* Map.tsx */
+
+  .map {
+    @apply w-screen h-screen;
   }
 }

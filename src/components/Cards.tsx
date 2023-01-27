@@ -1,13 +1,31 @@
+import { useQuery } from "@tanstack/react-query";
 import Card from "./Card";
-
+import getLocationData from "./getLocationData";
 Card;
 const Cards = () => {
+  const { data } = useQuery({
+    queryKey: ["location"],
+    queryFn: () => getLocationData(),
+  });
+
+  // console.log(data);
+
   return (
     <div className="cards ">
-      <Card title={"IP Address"} information={"8.8.8.8"} />
-      <Card title={"Location"} information={"Brooklyn, NY 92435"} />
-      <Card title={"timezone"} information={"UTC -5.00"} />
-      <Card title={"isp"} information={"Google LLC"} />
+      {data ? (
+        <>
+          <Card title={"IP Address"} information={data.ip} />
+          <Card
+            title={"Location"}
+            information={`${data.location.city}, ${data.location.region} ${data.location.postalCode}`}
+          />
+          <Card
+            title={"timezone"}
+            information={`UTC ${data.location.timezone}`}
+          />
+          <Card title={"isp"} information={`${data.isp}`} />
+        </>
+      ) : null}
     </div>
   );
 };

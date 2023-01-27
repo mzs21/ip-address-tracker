@@ -1,17 +1,16 @@
 import Cards from "./Cards";
 import Headline from "./Headline";
-import Map from "./Map";
+
 import SearchBar from "./SearchBar";
 
-const PrimarySection = () => {
+const Sections = () => {
   return (
-    <section className="primary-section">
+    <section>
       <Headline />
       <SearchBar />
       <Cards />
-    
     </section>
   );
 };
 
-export default PrimarySection;
+export default Sections;
