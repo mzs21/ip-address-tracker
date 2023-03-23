@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import BackgroundImage from "./components/BackgroundImage";
-import Map from "./components/Map";
-import Sections from "./components/Sections";
+import Main from "./components/Main";
 function App() {
   const client = new QueryClient({
     defaultOptions: {
@@ -14,8 +13,7 @@ function App() {
     <div>
       <BackgroundImage />
       <QueryClientProvider client={client}>
-        <Sections />
-        <Map />
+        <Main />
       </QueryClientProvider>
     </div>
   );

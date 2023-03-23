@@ -1,19 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import Icon from "./Icon";
-import getLocationData from "./getLocationData";
+import { MapContainer, TileLayer } from "react-leaflet";
+import getLocationData from "../utilities/getLocationData";
+import { ICoordsProps } from "../utilities/interface";
+import MarkerCoords from "./MarkerCoords";
 
 const Map = () => {
-  const position = [0, 0];
   const { data } = useQuery({
     queryKey: ["location"],
     queryFn: () => getLocationData(),
   });
 
-  console.log(data);
+  let coords: ICoordsProps;
 
-  const coords:number[] = [data?.location.lat, data?.location.lng];
+  if (data) {
+    let latitude: number = data.location.lat;
+    let longitude: number = data.location.lng;
+    coords = [latitude, longitude];
+  }
 
   return (
     <>
@@ -28,11 +32,7 @@ const Map = () => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker icon={Icon} position={coords}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
+          <MarkerCoords coords={coords} />
         </MapContainer>
       ) : null}
     </>

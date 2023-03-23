@@ -1,6 +1,5 @@
 import Cards from "./Cards";
 import Headline from "./Headline";
-
 import SearchBar from "./SearchBar";
 
 const Sections = () => {

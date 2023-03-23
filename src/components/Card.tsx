@@ -1,9 +1,6 @@
-interface CardProps {
-  title: string;
-  information: string;
-}
+import { ICardProps } from "../utilities/interface";
 
-const Card = ({ title, information }: CardProps) => {
+const Card = ({ title, information }: ICardProps) => {
   return (
     <div className="card ">
       <h3>{title}</h3>
